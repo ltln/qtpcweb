@@ -128,17 +128,17 @@ export default function JetBrains() {
                         <br />
                         <p><span className="text-blue-500">public class</span> Main {'{'}</p>
                         <p className="ml-8"><span className="text-blue-500">public static void main</span>(String[] args) {'{'}</p>
-                        <p className="ml-16">System.<span className="text-purple-400">out</span>.println(<span className="text-green-400">"Hi there, Welcome to my portfolio!"</span>);</p>
-                        <p className="ml-16">System.<span className="text-purple-400">out</span>.println(<span className="text-green-400">"I'm a 17-year old Vietnamese who likes tinkering with tech things."</span>);</p>
+                        <p className="ml-16">System.<span className="text-purple-400">out</span>.println(<span className="text-green-400">&#34;Hi there, Welcome to my portfolio!&#34;</span>);</p>
+                        <p className="ml-16">System.<span className="text-purple-400">out</span>.println(<span className="text-green-400">&quot;I&apos;m a 17-year old Vietnamese who likes tinkering with tech things.&quot;</span>);</p>
                         <p className="ml-16">
-                            System.<span className="text-purple-400">out</span>.println(<span className="text-green-400">"</span>
+                            System.<span className="text-purple-400">out</span>.println(<span className="text-green-400">&quot;</span>
                             <Link href="https://fb.com/qtpctechhxd" target="_blank" className="text-blue-400 hover:text-blue-500">Facebook</Link>,{' '}
                             <Link href="https://discord.com/users/839427463334461490" target="_blank" className="text-purple-400 hover:text-purple-500">Discord</Link>,{' '}
                             <Link href="https://github.com/QuanTrieuPCYT" target="_blank" className="text-slate-500 hover:text-slate-600">GitHub</Link>,{' '}
                             <Link href="https://twitter.com/qtpctechhxd" target="_blank" className="text-sky-400 hover:text-sky-500">X</Link>,{' '}
                             <Link href="https://www.youtube.com/c/QuanTrieuPCYT" target="_blank" className="text-red-400 hover:text-red-500">Youtube</Link>,{' '}
                             <Link href="https://www.reddit.com/user/qtpctechhxd/" target="_blank" className="text-orange-400 hover:text-orange-500">Reddit</Link>
-                            <span className="text-green-400">"</span>);
+                            <span className="text-green-400">&quot;</span>);
                         </p>
                         <p className="ml-8">{'}'}</p>
                         <p>{'}'}</p>
