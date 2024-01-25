@@ -9,19 +9,35 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tabler/icons-react": "^2.46.0",
+    "@tsparticles/engine": "^3.1.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.1.0",
+    "animejs": "^3.2.2",
+    "clsx": "^2.1.0",
+    "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "react-simple-typewriter": "^5.0.1",
+    "rehype-sanitize": "^6.0.0",
+    "tailwind-merge": "^2.2.1",
+    "three": "^0.160.1",
+    "three.js": "^0.77.0",
+    "tsparticles": "^3.1.0",
+    "uninstall": "^0.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/animejs": "^3.1.12",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/three": "^0.160.0",
     "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "typescript": "^5"
   }
 }
