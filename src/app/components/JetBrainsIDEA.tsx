@@ -30,7 +30,7 @@ export default function JetBrains() {
                         <IconChevronDown size="16px" className="text-gray-300" />
                     </div>
                 </div>
-                <div className="flex gap-12">
+                <div className="flex gap-12 max-md:hidden">
                     <div className="flex items-center gap-2">
                     <div className="flex items-center ml-3 gap-2 text-white max-sm:hidden">
                         <span>Current File</span>
@@ -127,17 +127,17 @@ export default function JetBrains() {
                         <p><span className="text-blue-500">package</span> tech.qtpc.web;</p>
                         <br />
                         <p><span className="text-blue-500">public class</span> Main {'{'}</p>
-                        <p className="ml-8"><span className="text-blue-500">public static void main</span>(String[] args) {'{'}</p>
-                        <p className="ml-16">System.<span className="text-purple-400">out</span>.println(<span className="text-green-400">&#34;Hi there, Welcome to my portfolio!&#34;</span>);</p>
-                        <p className="ml-16">System.<span className="text-purple-400">out</span>.println(<span className="text-green-400">&quot;I&apos;m a 17-year old Vietnamese who likes tinkering with tech things.&quot;</span>);</p>
-                        <p className="ml-16">
+                        <p className="ml-8 max-md:ml-2"><span className="text-blue-500">public static void main</span>(String[] args) {'{'}</p>
+                        <p className="ml-16 max-md:ml-4">System.<span className="text-purple-400">out</span>.println(<span className="text-green-400">&#34;Hi there, Welcome to my portfolio!&#34;</span>);</p>
+                        <p className="ml-16 max-md:ml-4">System.<span className="text-purple-400">out</span>.println(<span className="text-green-400">&quot;I&apos;m a 17-year old Vietnamese who likes tinkering with tech things.&quot;</span>);</p>
+                        <p className="ml-16 max-md:ml-4">
                             System.<span className="text-purple-400">out</span>.println(<span className="text-green-400">&quot;</span>
-                            <Link href="https://fb.com/qtpctechhxd" target="_blank" className="text-blue-400 hover:text-blue-500">Facebook</Link>,{' '}
-                            <Link href="https://discord.com/users/839427463334461490" target="_blank" className="text-purple-400 hover:text-purple-500">Discord</Link>,{' '}
-                            <Link href="https://github.com/QuanTrieuPCYT" target="_blank" className="text-slate-500 hover:text-slate-600">GitHub</Link>,{' '}
-                            <Link href="https://twitter.com/qtpctechhxd" target="_blank" className="text-sky-400 hover:text-sky-500">X</Link>,{' '}
-                            <Link href="https://www.youtube.com/c/QuanTrieuPCYT" target="_blank" className="text-red-400 hover:text-red-500">Youtube</Link>,{' '}
-                            <Link href="https://www.reddit.com/user/qtpctechhxd/" target="_blank" className="text-orange-400 hover:text-orange-500">Reddit</Link>
+                            <Link href="https://fb.com/qtpctechhxd" target="_blank" className="text-blue-400 hover:text-blue-500 font-bold">Facebook</Link>,{' '}
+                            <Link href="https://discord.com/users/839427463334461490" target="_blank" className="text-purple-400 hover:text-purple-500 font-bold">Discord</Link>,{' '}
+                            <Link href="https://github.com/QuanTrieuPCYT" target="_blank" className="text-slate-500 hover:text-slate-600 font-bold">GitHub</Link>,{' '}
+                            <Link href="https://twitter.com/qtpctechhxd" target="_blank" className="text-sky-400 hover:text-sky-500 font-bold">X</Link>,{' '}
+                            <Link href="https://www.youtube.com/c/QuanTrieuPCYT" target="_blank" className="text-red-400 hover:text-red-500 font-bold">Youtube</Link>,{' '}
+                            <Link href="https://www.reddit.com/user/qtpctechhxd/" target="_blank" className="text-orange-400 hover:text-orange-500 font-bold">Reddit</Link>
                             <span className="text-green-400">&quot;</span>);
                         </p>
                         <p className="ml-8">{'}'}</p>
@@ -167,7 +167,7 @@ export default function JetBrains() {
                 </div>
             </div>
             <div className="flex items-center justify-between px-3 py-2 bg-gray-800 text-sm text-gray-300 border-t-[1px] border-t-gray-900 rounded-b-lg">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 max-md:hidden">
                     <div className="flex items-center gap-1">
                         <IconSquare size="12px" className="text-blue-600" /> QuanTrieuPCYT
                     </div>
