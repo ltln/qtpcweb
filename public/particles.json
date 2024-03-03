@@ -2,9 +2,9 @@
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#000"
+      "value": "#020917"
     },
-    "image": "linear-gradient(45deg, rgba(2,0,36,1) 66%, rgba(9,9,121,1) 100%)",
+    "image": "",
     "position": "",
     "repeat": "",
     "size": "",
@@ -24,12 +24,12 @@
   "defaultThemes": {},
   "delay": 0,
   "fullScreen": {
-    "enable": true,
-    "zIndex": -1
+    "enable": false,
+    "zIndex": 0
   },
   "detectRetina": true,
   "duration": 0,
-  "fpsLimit": 120,
+  "fpsLimit": 60,
   "interactivity": {
     "detectsOn": "window",
     "events": {
@@ -44,11 +44,11 @@
         "type": "circle"
       },
       "onHover": {
-        "enable": false,
+        "enable": true,
         "mode": [],
         "parallax": {
-          "enable": false,
-          "force": 2,
+          "enable": true,
+          "force": 50,
           "smooth": 10
         }
       },

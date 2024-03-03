@@ -1,14 +1,16 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Jost } from "next/font/google";
 import "./globals.css";
-import Header from "@/app/components/Header";
-import StarParticles from "./components/StarParticles";
+import Header from "./components/Header";
+import { ThemeProvider } from "@/lib/theme-provider";
 import Footer from "./components/Footer";
-import { cn } from "@/lib/utils";
 
-const jost = Jost({ subsets: ["latin"] });
+const font = Jost({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  title: "QuanTrieuPCYT",
+  description: "Welcome to my portfolio!",
+};
 
 export default function RootLayout({
   children,
@@ -17,11 +19,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(jost.className,"relative")}>
-        <StarParticles />
+      <body className={font.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
         <Header />
         {children}
         <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

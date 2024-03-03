@@ -1,13 +1,25 @@
+"use client";
+
 import Link from "next/link";
+import { Button } from "./ui/button";
+import { IconChevronUp } from "@tabler/icons-react";
 
 export default function Footer() {
+    const scrollToTop = () => {
+        window ? window.scrollTo(0,0) : null;
+    }
     return (
-        <div className="mt-36 px-2 py-2 left-0 w-full flex justify-center text-center text-white">
-            <div className="text-sm text-gray-200">
-                <p>© Copyright 2024 QuanTrieuPCYT. All Rights Reversed.</p>
-                <p>Proudly designed with ❤️ by <Link href="https://github.com/ltln" target="_blank" className="text-pink-300 hover:text-pink-400">@ltln</Link>.</p>
-                <p>Built using <Link href="https://nextjs.org" target="_blank" className="text-pink-300 hover:text-pink-400">Next.js</Link> and <Link href="https://tailwindcss.com" target="_blank" className="text-pink-300 hover:text-pink-400">Tailwind CSS</Link></p>
+        <footer className="py-4 border-t-[1px] border-t-slate-100 dark:border-t-slate-900">
+            <div className="container text-center max-md:text-left">
+                <p className="text-balance text-center text-sm leading-loose text-muted-foreground">
+                    Built & Designed with ❤️ by @<Link href="https://github.com/ltln" target="_blank" className="font-medium underline underline-offset-2">ltln</Link>
+                </p>
+                <div className="text-center">
+                    <Button variant={"ghost"} onClick={scrollToTop}>
+                        <IconChevronUp className="animate-bounce" />
+                    </Button>
+                </div>
             </div>
-        </div>
+        </footer>
     )
 }
