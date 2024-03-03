@@ -14,7 +14,7 @@ export default function Home() {
           <div className="col-span-1 max-lg:col-span-2">
             <div className="text-lg flex gap-2 items-end">
               <QuoteIcon className="h-10 w-10 rotate-180 text-gray-600" />
-              <span className="text-gray-300">Hello there, I'm</span>
+              <span className="text-gray-300">Hello there, I&apos;m</span>
             </div>
             <div className="px-12 py-8">
               <p className="text-6xl font-bold text-purple-400">
@@ -30,10 +30,10 @@ export default function Home() {
                 <ul className="info text-base list-disc list-outside ml-4">
                   <li>I play <Link href="https://namemc.com/QuanTrieuPCYT" target="_blank">Minecraft</Link> and <Link href="https://osu.ppy.sh/users/19029746" target="_blank">osu!</Link></li>
                   <li>I own <Link href="https://namemc.com/QuanTrieuPCYT" target="_blank">ThiccMC</Link>, a Minecraft network</li>
-                  <li>I'm currently a twelveth grader @ <Link href="https://hes.vnu.edu.vn" target="_blank">HES High School</Link></li>
-                  <li>My music taste is kinda 'diverse' as I listen to a lot of genres of songs. I can list some artists such as <Link href="https://ehrlingmusic.com" target="_blank">Ehrling</Link>, <Link href="https://www.glassanimals.com" target="_blank">Glass Animals</Link>, <Link href="https://www.r3hab.com/" target="_blank">R3HAB</Link>, <Link href="https://www.youtube.com/channel/UCuKWFCkVDNzcFy5JGeJFrOw" target="_blank">Ngot</Link> and <Link href="https://www.youtube.com/channel/UCf14c1oBpl47qcbzWbFjNxA" target="_blank">Kien Trinh</Link>.</li>
-                  <li>Romcom is my favorite category of animes and mangas. I really love the series "<Link href="https://5hanayome.fandom.com/wiki/5-toubun_no_Hanayome" target="_blank">The Quintessential Quintuplets</Link>" and I adapted <Link href="https://5hanayome.fandom.com/wiki/Miku_Nakano" target="_blank">The Miku Nakano</Link> as my waifu 😭</li>
-                  <li>I'm an <Link href="https://apple.com" target="_blank">Apple</Link> fanboy. I also do hackintoshes and use Linux (5 years of Linux sysadmin experience!)</li>
+                  <li>I&apos;m currently a twelveth grader @ <Link href="https://hes.vnu.edu.vn" target="_blank">HES High School</Link></li>
+                  <li>My music taste is kinda &apos;diverse&apos; as I listen to a lot of genres of songs. I can list some artists such as <Link href="https://ehrlingmusic.com" target="_blank">Ehrling</Link>, <Link href="https://www.glassanimals.com" target="_blank">Glass Animals</Link>, <Link href="https://www.r3hab.com/" target="_blank">R3HAB</Link>, <Link href="https://www.youtube.com/channel/UCuKWFCkVDNzcFy5JGeJFrOw" target="_blank">Ngot</Link> and <Link href="https://www.youtube.com/channel/UCf14c1oBpl47qcbzWbFjNxA" target="_blank">Kien Trinh</Link>.</li>
+                  <li>Romcom is my favorite category of animes and mangas. I really love the series &quot;<Link href="https://5hanayome.fandom.com/wiki/5-toubun_no_Hanayome" target="_blank">The Quintessential Quintuplets</Link>&quot; and I adapted <Link href="https://5hanayome.fandom.com/wiki/Miku_Nakano" target="_blank">The Miku Nakano</Link> as my waifu 😭</li>
+                  <li>I&apos;m an <Link href="https://apple.com" target="_blank">Apple</Link> fanboy. I also do hackintoshes and use Linux (5 years of Linux sysadmin experience!)</li>
                   <li>I self-host my servers (the process is easier than you think 😆)</li>
                   <li>The Linux distribution that I use is <Link href="https://www.debian.org" target="_blank">Debian</Link> (both on my daily driver and my servers!)</li>
                   <li>I also have a strange obsession with home automation</li>
