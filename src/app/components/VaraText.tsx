@@ -9,13 +9,13 @@ export function VaraText({ text }: { text: string }) {
         if (ignore) return;
         var vara = new Vara(
             "#vara-container",
-            "/SatisfySL.json",
+            "/Pacifico.json",
             [
                 {
                     text: text,
-                    letterSpacing: 2,
+                    letterSpacing: 1,
                     fontSize: 75,
-                    strokeWidth: 2,
+                    strokeWidth: 1,
                     color: "#c084fc",
                     textAlign: "center"
                 },
@@ -24,5 +24,5 @@ export function VaraText({ text }: { text: string }) {
         ignore = true;
     }, [ignore]);
     
-    return <div id="vara-container" className="max-w-[400px] m-auto"></div>;
+    return <div id="vara-container" className="w-[500px]"></div>;
 }

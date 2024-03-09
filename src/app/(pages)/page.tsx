@@ -1,3 +1,5 @@
+"use client";
+
 import { QuoteIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 
@@ -5,6 +7,7 @@ import qtpc from "../../lib/assets/e.jpg";
 import Link from "next/link";
 import { Button } from "../components/ui/button";
 import { IconBrandDiscordFilled, IconBrandFacebookFilled, IconBrandGithubFilled, IconBrandReddit, IconBrandXFilled, IconBrandYoutubeFilled } from "@tabler/icons-react";
+import Typewritter from "../components/Typewritter";
 
 export default function Home() {
   return (
@@ -20,8 +23,8 @@ export default function Home() {
               <p className="text-6xl font-bold text-purple-400">
                 Quân Triệu
               </p>
-              <p className="text-2xl text-purple-400"><span className="text-lg text-gray-200">aka</span> QuanTrieuPCYT<span className="text-lg text-gray-200">,</span> cutiepc <span className="text-lg text-gray-200">or</span> qtpctechhxd</p>
-              <hr className="h-2 rounded-sm my-6 border-0 bg-purple-700" />
+              <p className="text-2xl text-purple-400"><span className="text-lg text-gray-200">aka</span> <Typewritter text={['QuanTrieuPCYT','cutiepc','qtpctechhxd']} /></p>
+              <hr className="h-2 rounded-sm my-6 border-0 bg-purple-700 hover:bg-purple-400 duration-500" />
               <div className="px-8 border-l-4 border-purple-700">
                 <p>A 18-year old Vietnamese who likes tinkering with tech things.</p>
               </div>

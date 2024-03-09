@@ -5,10 +5,13 @@ import { VaraText } from "@/app/components/VaraText";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/app/components/ui/select";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { CircuitBoard, Cpu, HardDrive, HdmiPort, MemoryStick, Palette, PowerSquare, Watch } from "lucide-react";
+import { AspectRatio } from "@/app/components/ui/aspect-ratio";
 
-import Windows from "../../../lib/assets/windows11_1.jpg";
-import WindowsScreen from "../../../lib/assets/windows11_2.jpg";
-import { CircuitBoard, Cpu, HardDrive, HdmiPort, MemoryStick, PowerSquare } from "lucide-react";
+import IP14Plus from "../../../lib/assets/ip14pl.jpg";
+import IP7Plus from "../../../lib/assets/ip7pl.webp";
+import APW from "../../../lib/assets/apw.webp";
+import ATV from "../../../lib/assets/appletv.png";
 
 export default function Devices() {
     const [device, setDevice] = useState<string>("Devices that I'm using");
@@ -16,10 +19,6 @@ export default function Devices() {
     useEffect(() => {
         const d_h_w = document.getElementById("device-header-wrapper");
         const d_h = document.getElementById("device-header");
-
-        const d1 = document.getElementById("desktop-1");
-        const d2 = document.getElementById("desktop-2");
-        const di = document.getElementById("desktop-info");
 
         const handleScroll = (event: Event) => {
             console.log(window.scrollY);
@@ -33,26 +32,6 @@ export default function Devices() {
                 d_h_w ? d_h_w.classList.remove("bg-background/95","backdrop-blur","supports-[backdrop-filter]:bg-background/60") : undefined;
                 d_h ? d_h.classList.add("border-b-2") : undefined;
             }
-
-            if (window.scrollY > 1800) {
-                setDevice("Desktop");
-                d1 ? d1.style.opacity = "0" : "";
-                d2 ? d2.style.opacity = "1" : "";
-                if (window.scrollY > 1900 && window.scrollY < 2301) {
-                    d2 ? d2.style.transform = `scale(${1 - ((window.scrollY - 1900) / (2300 - 1900)) * 0.4})` : "";
-                }
-
-                if (window.scrollY > 2300) {
-                    di ? di.classList.add('is-visible') : "";
-                } else {
-                    di ? di.classList.remove('is-visible') : "";
-                }
-
-            } else {
-                setDevice("Devices that I'm using");
-                d1 ? d1.style.opacity = "1" : "";
-                d2 ? d2.style.opacity = "0" : "";
-            }
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -62,7 +41,8 @@ export default function Devices() {
     }, []);
 
     return (
-        <main className="relative" onScroll={() => console.log("Hello!")}>
+        <main className="relative">
+            <ParticlesContainer />
             <div className="sticky top-0 z-10" id="device-header-wrapper">
                 <div className="w-full max-w-screen-lg m-auto px-12 py-1 border-b-2" id="device-header">
                     <div className="grid grid-cols-5">
@@ -95,32 +75,97 @@ export default function Devices() {
                     </div>
                 </div>
             </div>
-            <div className="relative h-screen/2 min-h-[600px] flex items-center justify-center">
-                <ParticlesContainer />
-                <VaraText text="Devices" />
+            <div className="relative h-[150px] mt-16 flex items-center justify-center">
+                <VaraText text="devices" />
             </div>
-            <div className="relative h-[1300px] mt-[1200px] w-full max-w-screen-xl m-auto">
-                <div className="sticky top-[70px]">
-                    <Image alt="" src={Windows} id="desktop-1" style={{ opacity: 1 }} />
-                    <Image alt="" src={WindowsScreen} id="desktop-2" className="absolute top-0" style={{ transform: 'scale(1.03)', opacity: 0 }} />
-                    <div className="fade-in-section mt-60 w-full max-w-screen-md m-auto border-l-4 border-purple-800 px-6 max-md:ml-6" id="desktop-info">
-                        <h1 className="text-2xl text-purple-400 mb-4">Desktop</h1>
+            <div className="mb-32 mt-[200px] w-full max-w-screen-xl m-auto">
+                <div className="grid grid-cols-5 max-lg:grid-cols-1">
+                    <div className="col-span-3 max-lg:mb-24">
+                        <AspectRatio ratio={16 / 9}>
+                            <video 
+                                controls={false} autoPlay muted loop preload="auto"
+                            >
+                                <source src="/win11livescreen.mp4" type="video/mp4" />
+                            </video>
+                        </AspectRatio>
+                    </div>
+                    <div className="w-full col-span-2 m-auto border-l-4 border-purple-800 max-md:border-none px-6 max-md:ml-6">
+                        <h1 className="text-2xl text-purple-400 mb-4 max-md:text-center max-md:underline">Desktop</h1>
                         <ul className="list-none list-outside text-lg columns-2 max-md:columns-1">
-                            <li className="flex gap-2 items-center"><Cpu />Intel® Core™ i3-10105F</li>
-                            <li className="flex gap-2 items-center"><MemoryStick />32GB DDR4 3200MHz</li>
-                            <li className="flex gap-2 items-center"><HdmiPort />AMD Radeon RX 6600 XT</li>
-                            <li className="flex gap-2 items-center"><HardDrive />120GB SATA SSD</li>
-                            <li className="flex gap-2 items-center"><HardDrive />256GB NVMe PCIe 3x4</li>
-                            <li className="flex gap-2 items-center"><HardDrive />1TB HDD</li>
-                            <li className="flex gap-2 items-center"><HardDrive />500GB HDD</li>
-                            <li className="flex gap-2 items-center"><CircuitBoard />ASRock B560M Pro4</li>
-                            <li className="flex gap-2 items-center"><PowerSquare />Coolermaster PC600 PSU</li>
+                            <li className="flex gap-2 items-center max-md:justify-center"><Cpu />Intel® Core™ i3-10105F</li>
+                            <li className="flex gap-2 items-center max-md:justify-center"><MemoryStick />32GB DDR4 3200MHz</li>
+                            <li className="flex gap-2 items-center max-md:justify-center"><HdmiPort />AMD Radeon RX 6600 XT</li>
+                            <li className="flex gap-2 items-center max-md:justify-center"><HardDrive />120GB SATA SSD</li>
+                            <li className="flex gap-2 items-center max-md:justify-center"><HardDrive />256GB NVMe PCIe 3x4</li>
+                            <li className="flex gap-2 items-center max-md:justify-center"><HardDrive />1TB HDD</li>
+                            <li className="flex gap-2 items-center max-md:justify-center"><HardDrive />500GB HDD</li>
+                            <li className="flex gap-2 items-center max-md:justify-center"><CircuitBoard />ASRock B560M Pro4</li>
+                            <li className="flex gap-2 items-center max-md:justify-center"><PowerSquare />Coolermaster PC600 PSU</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div className="min-h-screen mt-[1200px] w-full m-auto">
-
+            <div className="mb-32 w-full max-w-screen-xl m-auto">
+                <div className="grid grid-cols-6 max-lg:grid-cols-2 max-md:grid-cols-1">
+                    <div className="lg:col-start-2 lg:col-span-2">
+                        <Image src={IP14Plus} alt="" className="m-auto mb-4 max-h-96 w-auto" />
+                        <div className="w-full col-span-2 m-auto border-l-4 border-purple-800 max-md:border-none px-6 max-md:ml-6">
+                            <h1 className="text-2xl text-purple-400 mb-4 max-md:text-center max-md:underline">iPhone 14 Plus</h1>
+                            <ul className="list-none list-outside text-lg columns-2 max-md:columns-1">
+                                <li className="flex gap-2 items-center max-md:justify-center"><Cpu />Apple A15 Bionic</li>
+                                <li className="flex gap-2 items-center max-md:justify-center"><MemoryStick />6GB LPDDR4X</li>
+                                <li className="flex gap-2 items-center max-md:justify-center"><HardDrive />128GB NVMe</li>
+                                <li className="flex gap-2 items-center max-md:justify-center"><Palette /><span className="px-2 py-1 bg-[#a9bacc] rounded-lg text-blue-700">Blue</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="lg:col-span-2">
+                        <Image src={IP7Plus} alt="" className="m-auto mb-4 max-h-96 w-auto" />
+                        <div className="w-full col-span-2 m-auto border-l-4 border-purple-800 max-md:border-none px-6 max-md:ml-6">
+                            <h1 className="text-2xl text-purple-400 mb-4 max-md:text-center max-md:underline">iPhone 7 Plus</h1>
+                            <ul className="list-none list-outside text-lg columns-2 max-md:columns-1">
+                                <li className="flex gap-2 items-center max-md:justify-center"><Cpu />Apple A10 Fusion</li>
+                                <li className="flex gap-2 items-center max-md:justify-center"><MemoryStick />3GB LPDDR4</li>
+                                <li className="flex gap-2 items-center max-md:justify-center"><HardDrive />128GB NVMe</li>
+                                <li className="flex gap-2 items-center max-md:justify-center"><Palette /><span className="px-2 py-1 bg-[#e8d1b7] rounded-lg text-yellow-700">Gold</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="mb-32 w-full max-w-screen-xl m-auto">
+                <div className="grid grid-cols-6 max-md:grid-cols-1">
+                    <div className="w-full lg:col-start-2 col-span-2 max-lg:col-span-3 m-auto border-r-4 border-purple-800 max-md:border-none px-6 max-md:ml-6 md:text-right">
+                        <h1 className="text-2xl text-purple-400 max-md:text-center">Apple Watch Series 5</h1>
+                        <h1 className="text-lg text-purple-300 mb-4 max-md:text-center max-md:underline">44mm + GPS</h1>
+                        <ul className="list-none list-outside text-lg columns-2 max-md:columns-1">
+                            <li className="flex gap-2 items-center justify-end max-md:justify-center"><span className="max-md:order-2">Apple S5</span><Cpu /></li>
+                            <li className="flex gap-2 items-center justify-end max-md:justify-center"><span className="max-md:order-2">1GB</span><MemoryStick /></li>
+                            <li className="flex gap-2 items-center justify-end max-md:justify-center"><span className="max-md:order-2">32GB NVMe</span><HardDrive /></li>
+                            <li className="flex gap-2 items-center justify-end max-md:justify-center"><span className="max-md:order-2 px-2 py-1 bg-[#3a3b38] rounded-lg text-gray-300">Space Gray</span><Palette /></li>
+                            <li className="flex gap-2 items-center justify-end max-md:justify-center"><span className="max-md:order-2">Always-on Display</span><Watch /></li>
+                        </ul>
+                    </div>
+                    <div className="col-span-2 max-lg:col-span-3 max-md:mb-12 max-md:order-first">
+                        <Image src={APW} alt="" className="m-auto mb-4 max-h-96 w-auto" />
+                    </div>
+                </div>
+            </div>
+            <div className="mb-32 w-full max-w-screen-xl m-auto">
+                <div className="grid grid-cols-5 max-lg:grid-cols-1">
+                    <div className="col-span-3 max-lg:mb-24">
+                        <Image src={ATV} alt="" className="m-auto mb-4 max-h-64 w-auto" />
+                    </div>
+                    <div className="w-full col-span-2 m-auto border-l-4 border-purple-800 max-md:border-none px-6 max-md:ml-6">
+                        <h1 className="text-2xl text-purple-400 max-md:text-center">Apple TV 4K</h1>
+                        <h1 className="text-lg text-purple-300 mb-4 max-md:text-center max-md:underline">2nd generation</h1>
+                        <ul className="list-none list-outside text-lg columns-2 max-md:columns-1">
+                            <li className="flex gap-2 items-center max-md:justify-center"><Cpu />Apple A12 Bionic</li>
+                            <li className="flex gap-2 items-center max-md:justify-center"><MemoryStick />3GB LPDDR4</li>
+                            <li className="flex gap-2 items-center max-md:justify-center"><HardDrive />64GB NVMe</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </main>
     )
